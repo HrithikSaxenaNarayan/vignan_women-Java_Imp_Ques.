@@ -65,6 +65,8 @@ public class lec1{
             System.out.println(res);
         }
     }
+    
+    public static void inverseNum(int n) {}
     public static void main(String[] args){
         forwardOrderNum(scn.nextInt()); // function calling
     }
