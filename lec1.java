@@ -47,10 +47,25 @@ public class lec1{
         }
     }
 
+    public static int powerFunc(int n) {
+        int pow = 1;
+        while (n != 0) {
+            n /= 10;
+            pow *= 10;
+        }
+        return pow/10;
+    }
+
     public static void forwardOrderNum(int n){ 
-        
+        int pow = powerFunc(n);
+        while(pow != 0) {
+            int res = n / pow;
+            n %= pow;
+            pow /= 10;
+            System.out.println(res);
+        }
     }
     public static void main(String[] args){
-        reverseNum(scn.nextInt()); // function calling
+        forwardOrderNum(scn.nextInt()); // function calling
     }
 }
