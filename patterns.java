@@ -21,7 +21,11 @@ public class patterns {
             System.out.println();
         }
     }
+   
+    public static void mirrorRightTri(int n) {
+
+    }
     public static void main(String[] args) {
-        square(scn.nextInt());
+        rightTri(scn.nextInt());
     }
 }
