@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-html , body{
+html,
+body {
     height: 100%;
     width: 100%;
 }
@@ -17,24 +18,48 @@ Main {
 .page1 {
     height: 100%;
     width: 100%;
-    /* background-color: #3f3f3f; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b1b1b;
 }
 
 .post-container {
     height: 70vh;
-    width: 30vw;
+    width: 25vw;
     border: 1px solid #dadada;
 }
 
 .info-container {
-    height: 10vh;
+    padding: 0 10px 0 0;
+    height: 15%;
     width: 100%;
-    border-bottom: 1px solid #8b8b8b;
+    border-bottom: 1px solid #3a3838;
+    display: flex;
+    gap: 5%;
+    justify-content: space-between;
+    /*x axis*/
+    align-items: center;
+    /*y axis*/
+    color: aliceblue;
 }
 
-.profile-pic{
-    height: 70%;
-    width: 10%;
+.profile-picName {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic-span {
+    height: 100%;
+    width: 35%;
+    padding: 10px;
+}
+
+.profile-pic {
+    height: 100%;
+    width: 100%;
     border: 1px solid black;
     border-radius: 50%;
     overflow: hidden;
@@ -43,4 +68,71 @@ Main {
 .profile-pic img {
     height: 100%;
     width: 100%;
+}
+
+.profile-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name .name {
+    font-size: 2.5vh;
+    font-weight: 600;
+}
+
+.profile-name .caption {
+    font-size: 2vh;
+    font-weight: 200;
+}
+
+.btnMore {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.follow-btn {
+    background-color: #8b8b8b;
+    color: #dadada;
+    border-radius: 10px;
+}
+
+.follow-btn input {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: #8b8b8b;
+    color: aliceblue;
+    border: none;
+}
+
+.follow-btn input:hover{
+    background-color: #545454;
+    transform: scale(1.05);
+}
+
+.more {
+    font-size: 3vh;
+    font-weight: 700;
+}
+
+.post {
+    height: 75%;
+    width: 100%;
+}
+
+.post img{
+    height: 100%;
+    width: 100%;
+}
+
+.act-btn {
+    padding: 0 10px 0 10px;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
