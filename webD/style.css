@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+Main {
+    height: 100%;
+    width: 100%;
+}
+
+.page1 {
+    height: 100%;
+    width: 100%;
+    /* background-color: #3f3f3f; */
+}
+
+.post-container {
+    height: 70vh;
+    width: 30vw;
+    border: 1px solid #dadada;
+}
+
+.info-container {
+    height: 10vh;
+    width: 100%;
+    border-bottom: 1px solid #8b8b8b;
+}
+
+.profile-pic{
+    height: 70%;
+    width: 10%;
+    border: 1px solid black;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-pic img {
+    height: 100%;
+    width: 100%;
+}
