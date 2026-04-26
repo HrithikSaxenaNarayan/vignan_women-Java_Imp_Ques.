@@ -130,9 +130,15 @@ Main {
 }
 
 .act-btn {
-    padding: 0 10px 0 10px;
+    padding: 5px 10px 0 10px;
     height: 10%;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    color:bisque;
+    font-size: 4vh;
+}
+
+.ri-heart-fill {
+    color: red;
 }
