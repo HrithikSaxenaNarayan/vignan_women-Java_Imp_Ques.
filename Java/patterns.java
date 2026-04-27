@@ -85,8 +85,7 @@ public class patterns {
             if (row <= n / 2) {
                 nst += 2;
                 nsp--;
-            }
-            else {
+            } else {
                 nst -= 2;
                 nsp++;
             }
@@ -95,38 +94,37 @@ public class patterns {
     }
 
     public static void numTri2(int n) {
-    int nst = 1;
-    int nsp = n / 2;
+        int nst = 1;
+        int nsp = n / 2;
 
-    for (int row = 1; row <= n; row++) {
+        for (int row = 1; row <= n; row++) {
 
-        for (int csp = 1; csp <= nsp; csp++) {
-            System.out.print("\t");
-        }
-
-        int num = 1;
-
-        for (int cst = 1; cst <= nst; cst++) {
-            System.out.print(num + "\t");
-
-            if (cst <= nst / 2) {
-                num++;
-            } else {
-                num--;
+            for (int csp = 1; csp <= nsp; csp++) {
+                System.out.print("\t");
             }
-        }
 
-        if (row <= n / 2) {
-            nst += 2;
-            nsp--;
-        } else {
-            nst -= 2;
-            nsp++;
-        }
+            int num = (row <= n / 2) ? row : n - row + 1;
+            for (int cst = 1; cst <= nst; cst++) {
+                System.out.print(num + "\t");
 
-        System.out.println();
+                if (cst <= nst / 2) {
+                    num++;
+                } else {
+                    num--;
+                }
+            }
+
+            if (row <= n / 2) {
+                nst += 2;
+                nsp--;
+            } else {
+                nst -= 2;
+                nsp++;
+            }
+
+            System.out.println();
+        }
     }
-}
 
     public static void numTri3(int n) {
 
