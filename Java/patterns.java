@@ -145,6 +145,6 @@ public class patterns {
     }
 
     public static void main(String[] args) {
-        numTri2(scn.nextInt());
+        numTri3(scn.nextInt());
     }
 }
