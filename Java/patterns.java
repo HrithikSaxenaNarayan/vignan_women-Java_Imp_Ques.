@@ -57,14 +57,12 @@ public class patterns {
         }
     }
 
-    
     public static void cross(int n) {
-        for(int i = 1; i <= n; i++) {
+        for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
                 if ((i == j) || (i + j == n + 1)) {
                     System.out.print("*\t");
-                }
-                else{
+                } else {
                     System.out.print("\t");
                 }
             }
@@ -73,12 +71,62 @@ public class patterns {
     }
 
     public static void numTri1(int n) {
+        int num = 1;
+        int nst = 1;
+        int nsp = n / 2;
 
+        for (int row = 1; row <= n; row++) {
+            for (int csp = 1; csp <= nsp; csp++) {
+                System.out.print("\t");
+            }
+            for (int cst = 1; cst <= nst; cst++) {
+                System.out.print(++num + "\t");
+            }
+            if (row <= n / 2) {
+                nst += 2;
+                nsp--;
+            }
+            else {
+                nst -= 2;
+                nsp++;
+            }
+            System.out.println();
+        }
     }
 
     public static void numTri2(int n) {
+    int nst = 1;
+    int nsp = n / 2;
 
+    for (int row = 1; row <= n; row++) {
+
+        for (int csp = 1; csp <= nsp; csp++) {
+            System.out.print("\t");
+        }
+
+        int num = 1;
+
+        for (int cst = 1; cst <= nst; cst++) {
+            System.out.print(num + "\t");
+
+            if (cst <= nst / 2) {
+                num++;
+            } else {
+                num--;
+            }
+        }
+
+        if (row <= n / 2) {
+            nst += 2;
+            nsp--;
+        } else {
+            nst -= 2;
+            nsp++;
+        }
+
+        System.out.println();
     }
+}
 
     public static void numTri3(int n) {
 
@@ -87,8 +135,8 @@ public class patterns {
     public static void diamondOfSpaces(int n) {
 
     }
-    
+
     public static void main(String[] args) {
-        cross(scn.nextInt());
+        numTri2(scn.nextInt());
     }
 }
