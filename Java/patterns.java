@@ -127,7 +127,17 @@ public class patterns {
     }
 
     public static void numTri3(int n) {
-
+        int nst = 1 , a = 0, b = 1;
+        for (int row = 1; row <= n; row++) {
+            for (int cst = 1; cst <= nst; cst++) {
+                System.out.print(a + "\t");
+                int temp = a + b;
+                a = b; 
+                b = temp;
+            }
+            System.out.println();
+            nst++;
+        }
     }
 
     public static void diamondOfSpaces(int n) {
