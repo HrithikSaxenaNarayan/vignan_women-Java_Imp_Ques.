@@ -127,16 +127,42 @@ public class patterns {
     }
 
     public static void numTri3(int n) {
-        int nst = 1 , a = 0, b = 1;
+        int nst = 1, a = 0, b = 1;
         for (int row = 1; row <= n; row++) {
             for (int cst = 1; cst <= nst; cst++) {
                 System.out.print(a + "\t");
                 int temp = a + b;
-                a = b; 
+                a = b;
                 b = temp;
             }
             System.out.println();
             nst++;
+        }
+    }
+
+    public static void numberW(int n) {
+        int nst = 1;
+        int nsp = (2 * n) - 3;
+        for (int row = 1; row <= n; row++) {
+            int val = 1;
+            for (int cst = 1; cst <= nst; cst++) {
+                System.out.print(val++ + "\t");
+            }
+            for (int csp = 1; csp <= nsp; csp++) {
+                System.out.print("\t");
+            }
+
+            for (int cst = 1; cst <= nst; cst++) {
+                if (row == n && cst == 1) {
+                    val--;
+                    continue;
+                }
+                System.out.print(--val + "\t");
+            }
+
+            nsp -= 2;
+            nst++;
+            System.out.println();
         }
     }
 
@@ -145,6 +171,6 @@ public class patterns {
     }
 
     public static void main(String[] args) {
-        numTri3(scn.nextInt());
+        numberW(scn.nextInt());
     }
 }
