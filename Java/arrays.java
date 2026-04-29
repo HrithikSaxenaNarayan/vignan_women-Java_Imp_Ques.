@@ -43,7 +43,7 @@ public class arrays {
         return foundAtIndex;
     }
 
-    public static int spanOfArray1 (int[] arr) {
+    public static int spanOfArray1(int[] arr) {
         int minElem = minimum(arr);
         int maxEle = maximum(arr);
 
@@ -62,14 +62,49 @@ public class arrays {
         return span;
     }
 
+    public static void swapfn(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
     public static int[] reverseOfArray(int[] arr) {
-        // no extra space
-        // no strings
-        // no standard liberaries
-        // within the time complexity of O(n)
+        int i = 0;
+        int j = arr.length - 1;
+        while (i < j) {
+            swapfn(arr, i, j);
+            i++;
+            j--;
+        }
+        return arr;
+    }
+
+    public static int[] inverseArray(int[] arr) {
+        int[] ans = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            ans[arr[i]] = i;
+        }
+        return ans;
+    }
+
+    public static int[] rotateArray(int[] arr, int r) {
+        int n = arr.length;
+        int[] ans = new int[n];
+
+        r %= n;
+
+        if(r < 0) {
+            r += n;
+        }
+
+        for (int i = 0; i < n; i++) {
+            int idx = (i + r) % n;
+            ans[idx] = arr[i];
+        }
+        return ans;
     }
 
     public static void main(String[] args) {
-        System.out.println(spanOfArray(input1(scn.nextInt())));
+        display1(rotateArray(input1(scn.nextInt()), scn.nextInt()));
     }
 }
