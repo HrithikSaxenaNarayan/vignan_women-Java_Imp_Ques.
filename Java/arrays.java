@@ -13,7 +13,7 @@ public class arrays {
 
     public static void display1(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
+            System.out.print(arr[i] + " ");
         }
     }
 
@@ -104,7 +104,6 @@ public class arrays {
         return ans;
     }
 
-
     public static void additionArray(int[] arr1, int[] arr2) {
         int n = arr1.length, m = arr2.length;
         int ansLen = Math.max(n, m) + 1;
@@ -122,8 +121,19 @@ public class arrays {
             j--;
             k--;
         }
+
+        for (int idx = 0; idx < ansLen; idx++) {
+            if (idx == 0 && ans[idx] == 0) {
+                continue;
+            }
+            System.out.print(ans[idx] + " ");
+        }
     }
+    
+    public static void subtractionArray(int[] arr1, int[] arr2) {}
+    
+    
     public static void main(String[] args) {
-        display1(rotateArray(input1(scn.nextInt()), scn.nextInt()));
+        additionArray(input1(scn.nextInt()), input1(scn.nextInt()));
     }
 }
