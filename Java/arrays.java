@@ -104,6 +104,25 @@ public class arrays {
         return ans;
     }
 
+
+    public static void additionArray(int[] arr1, int[] arr2) {
+        int n = arr1.length, m = arr2.length;
+        int ansLen = Math.max(n, m) + 1;
+        int[] ans = new int[ansLen];
+        int i = n -1, j = m - 1, k = ansLen - 1, carry = 0;
+
+        while(k >= 0) {
+            int sum = carry + ((i >= 0)? arr1[i] : 0) + ((j >= 0)? arr2[j] : 0);
+
+            carry = sum / 10;
+            ans[k] = sum % 10;
+            
+            
+            i--;
+            j--;
+            k--;
+        }
+    }
     public static void main(String[] args) {
         display1(rotateArray(input1(scn.nextInt()), scn.nextInt()));
     }
