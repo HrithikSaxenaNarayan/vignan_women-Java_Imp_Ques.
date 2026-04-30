@@ -93,7 +93,7 @@ public class arrays {
 
         r %= n;
 
-        if(r < 0) {
+        if (r < 0) {
             r += n;
         }
 
@@ -108,15 +108,13 @@ public class arrays {
         int n = arr1.length, m = arr2.length;
         int ansLen = Math.max(n, m) + 1;
         int[] ans = new int[ansLen];
-        int i = n -1, j = m - 1, k = ansLen - 1, carry = 0;
+        int i = n - 1, j = m - 1, k = ansLen - 1, carry = 0;
 
-        while(k >= 0) {
-            int sum = carry + ((i >= 0)? arr1[i] : 0) + ((j >= 0)? arr2[j] : 0);
-
+        while (k >= 0) {
+            int sum = carry + ((i >= 0) ? arr1[i] : 0) + ((j >= 0) ? arr2[j] : 0);
             carry = sum / 10;
             ans[k] = sum % 10;
-            
-            
+
             i--;
             j--;
             k--;
@@ -129,11 +127,42 @@ public class arrays {
             System.out.print(ans[idx] + " ");
         }
     }
-    
-    public static void subtractionArray(int[] arr1, int[] arr2) {}
-    
-    
+
+    public static void subtractionArray(int[] arr1, int[] arr2) {
+        int n = arr1.length, m = arr2.length;
+        int ansLen = Math.max(n, m);
+        int[] ans = new int[ansLen];
+        int i = n - 1, j = m - 1, k = ansLen - 1, borrow = 0;
+
+        while (k >= 0) {
+            int diff = borrow + ((i >= 0) ? arr1[i] : 0) - ((j >= 0) ? arr2[j] : 0);
+
+            if (diff < 0) {
+                borrow = -1;
+                diff += 10;
+            } else {
+                borrow = 0;
+            }
+
+            ans[k] = diff;
+
+            i--;
+            j--;
+            k--;
+        }
+
+        boolean nonZeros = false;
+        for (int elem : ans) {
+            if (elem != 0) {
+                nonZeros = true;
+            }
+            if (nonZeros) {
+                System.out.print(elem + " ");
+            }
+        }
+    }
+
     public static void main(String[] args) {
-        additionArray(input1(scn.nextInt()), input1(scn.nextInt()));
+        subtractionArray(input1(scn.nextInt()), input1(scn.nextInt()));
     }
 }
