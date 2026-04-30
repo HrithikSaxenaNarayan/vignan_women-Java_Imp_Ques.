@@ -45,14 +45,24 @@ public class twoDarrays{
 
     }
 
-    // public static boolean find(int[][] arr, int data) {
+    public static boolean find(int[][] arr, int data) {
+        boolean isData = false;
+        int n = arr.length, m = arr[0].length;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                isData = arr[i][j] == data;
+                if (isData) {
+                    return isData;
+                }
+            }
+        }
+        return isData;
+    }
 
-    // }
+    public static int span(int[][] arr) {
 
-    // public static int span(int[][] arr) {
-
-    // }
+    }
     public static void main(String[] args){
-        System.out.println(minimum(input(scn.nextInt(), scn.nextInt())));
+        System.out.println(find(input(scn.nextInt(), scn.nextInt()), scn.nextInt()));
     }
 }
