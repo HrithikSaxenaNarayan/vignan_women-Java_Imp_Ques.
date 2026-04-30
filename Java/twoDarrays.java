@@ -33,11 +33,19 @@ public class twoDarrays{
         return maxEle;
     }
     
-    // public static int minimum(int[][] arr) {
+    public static int minimum(int[][] arr) {
+        int n = arr.length, m = arr[0].length;
+        int minEle = (int)1e9;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                minEle = Math.min(minEle, arr[i][j]);
+            }
+        }
+        return minEle;
 
-    // }
+    }
 
-    // public static int find(int[][] arr, int data) {
+    // public static boolean find(int[][] arr, int data) {
 
     // }
 
@@ -45,6 +53,6 @@ public class twoDarrays{
 
     // }
     public static void main(String[] args){
-        System.out.println(maximum(input(scn.nextInt(), scn.nextInt())));
+        System.out.println(minimum(input(scn.nextInt(), scn.nextInt())));
     }
 }
