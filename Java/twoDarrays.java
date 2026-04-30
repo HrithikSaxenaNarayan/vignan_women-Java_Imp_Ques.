@@ -23,22 +23,28 @@ public class twoDarrays{
     }
     
     public static int maximum(int[][] arr) {
-
+        int n = arr.length, m = arr[0].length;
+        int maxEle = -(int)1e9;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                maxEle = Math.max(maxEle, arr[i][j]);
+            }
+        }
+        return maxEle;
     }
     
-    public static int minimum(int[][] arr) {
+    // public static int minimum(int[][] arr) {
 
-    }
+    // }
 
-    public static int find(int[][] arr, int data) {
+    // public static int find(int[][] arr, int data) {
 
-    }
+    // }
 
-    public static int span(int[][] arr) {
+    // public static int span(int[][] arr) {
 
-    }
+    // }
     public static void main(String[] args){
-        display(input(scn.nextInt(), scn.nextInt()));
-
+        System.out.println(maximum(input(scn.nextInt(), scn.nextInt())));
     }
 }
