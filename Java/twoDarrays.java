@@ -81,8 +81,26 @@ public class twoDarrays{
         }
     }
 
+    public static void stateOfWakanda2(int[][] arr) {
+        int n = arr.length, m = arr[0].length;
+
+        for(int col = 0; col < m; col++) {
+            if (col % 2 == 0) {
+                for (int row = 0; row < n; row++) {
+                    System.out.print(arr[row][col] + " ");
+                }
+            }
+            else {
+                for (int row = n-1; row >= 0; row--) {
+                    System.out.print(arr[row][col] + " ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
 
     public static void main(String[] args){
-        stateOfWakanda(input(scn.nextInt(), scn.nextInt()));
+        stateOfWakanda2(input(scn.nextInt(), scn.nextInt()));
     }
 }
