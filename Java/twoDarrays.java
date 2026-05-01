@@ -59,10 +59,30 @@ public class twoDarrays{
         return isData;
     }
 
-    public static int span(int[][] arr) {
+    // public static int span(int[][] arr) {
 
+    // }
+
+    public static void stateOfWakanda1 (int[][] arr) {
+        int n = arr.length, m = arr[0].length;
+
+        for(int row = 0; row < n; row++) {
+            if (row % 2 == 0) {
+                for (int col = 0; col < m; col++) {
+                    System.out.print(arr[row][col] + " ");
+                }
+            }
+            else {
+                for (int col = m-1; col >= 0; col--) {
+                    System.out.print(arr[row][col] + " ");
+                }
+            }
+            System.out.println();
+        }
     }
+
+
     public static void main(String[] args){
-        System.out.println(find(input(scn.nextInt(), scn.nextInt()), scn.nextInt()));
+        stateOfWakanda(input(scn.nextInt(), scn.nextInt()));
     }
 }
