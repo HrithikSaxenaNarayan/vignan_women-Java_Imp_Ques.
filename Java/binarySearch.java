@@ -15,9 +15,9 @@ public class binarySearch {
 
     public static int searchData(int[] arr, int data) {
         int si = 0, ei = arr.length - 1;
-        int mid = ((ei + si) / 2);
-
+        
         while (si <= ei) {
+            int mid = ((ei + si) / 2);
             if (arr[mid] == data) {
                 return mid;
             }
@@ -31,6 +31,7 @@ public class binarySearch {
         return -1;
     }
 
+    
     public static void main(String[] args) {
         System.out.println(searchData(input1(scn.nextInt()), scn.nextInt()));
     }
