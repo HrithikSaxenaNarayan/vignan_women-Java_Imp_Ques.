@@ -162,8 +162,6 @@ public class arrays {
         }
     }
 
-    
-
     public static void main(String[] args) {
         subtractionArray(input1(scn.nextInt()), input1(scn.nextInt()));
     }
