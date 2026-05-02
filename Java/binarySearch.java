@@ -71,9 +71,15 @@ public class binarySearch {
         return -1;
     }
 
+    public static int firstAndLastIdx(int[] arr) {
+
+    }
     public static void main(String[] args) {
         System.out.println(lastIdx(input1(scn.nextInt()), scn.nextInt()));
     }
 }
+
+
+// git add . && git commit -m "update" && git push
 
 //
