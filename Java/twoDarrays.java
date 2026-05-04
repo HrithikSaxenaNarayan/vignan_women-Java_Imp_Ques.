@@ -114,7 +114,7 @@ public class twoDarrays{
         int rmin = 0, rmax = n - 1;
         int cmin = 0, cmax = m-1;
 
-        while(tnel >= 0) {
+        while(tnel > 0) {
             for (int row = rmin; row <= rmax && tnel > 0; row++) {
                 System.out.print(arr[row][cmin] + " ");
                 tnel--;
